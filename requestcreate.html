@@ -1,15 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crear Solicitud</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #8bc34a;
+    background-image: url("resources/greenbg.jpg"); /* Replace with the path to your geometric pattern image */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .form-container {
+    width: 50%;
+    padding: 20px;
+    background-color: #4caf50;
+    background-image: url("resources/greenfrm.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  h2 {
+    text-align: center;
+    color: white;
+    background-color: #333;
+    border-radius: 0.3rem;
+  }
+  textarea {
+      width: calc(100% - 20px);
+      height: 40px; /* Adjust the height as needed */
+      resize: vertical; /* Allows vertical resizing */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 15px;
+      font-family: Arial, sans-serif;
+    }
+  input[type="text"].input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    height:20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+  }
+  input[type="integer"].input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+  }
+  .select-box {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    color: #333;
+  }
+  .submit-button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background-color: #388e3c;
+    color: white;
+    text-align: center;
+    display: block;
+    margin: auto;
+    font-size: large;
+    border: none;
+    cursor: pointer;
+  }
+</style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    
-    <!-- Your content goes here -->
-    
-    <script src="script.js"></script>
+
+<div class="form-container">
+  <h2>Crear Solicitud</h2>
+  <form action="/submit-request" method="post"> <!-- Replace with your actual submission URL -->
+    <input type="text" class="input-field" name="subject" placeholder="Asunto">
+    <textarea type="text" class="input-field" name="description" placeholder="Descripción"></textarea>
+    <input type="integer" class="input-field" name="reward" placeholder="Recompensa">
+    <h2>Importancia</h2>
+    <select class="select-box" name="importance">
+        <option value="HIGH">HIGH</option>
+        <option value="MEDIUM">MEDIUM</option>
+        <option value="LOW">LOW</option>
+      </select>
+    <button type="submit" class="submit-button" formaction="requestbase.html">Enviar Solicitud</button>
+  </form>
+</div>
+
 </body>
 </html>
