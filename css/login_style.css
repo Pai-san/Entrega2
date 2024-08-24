@@ -1,6 +1,6 @@
 body {
     font-family: 'Comic Sans MS', sans-serif;
-    background: url('resources/city1.png') no-repeat center center fixed;
+    background: url('../resources/city1.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     margin: 0;
