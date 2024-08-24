@@ -73,6 +73,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
         setTimeout(function() {
             window.location.href = 'login.html';
         }, 2000);
+        
     }
 });
 
