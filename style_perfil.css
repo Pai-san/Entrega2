@@ -1,0 +1,279 @@
+body {
+    background-image: url('resources/BgPerfil.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.contenedor {
+    display: flex;
+    width: 100%;
+    max-width: 1800px;
+    height: 100%;
+    position: relative;
+}
+
+.contenedor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('resources/Fondo_Contenedor.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.contenedor > * {
+    position: relative;
+    z-index: 2;
+}
+
+.lado {
+    flex: 1;
+    max-width: 25%;
+    background-color: rgba(234, 234, 234, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+}
+
+.centro {
+    flex: 2;
+    max-width: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.perfil-usuario {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.info-usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.nombre-usuario {
+    font-size: 43px;
+    margin: 0;
+}
+
+.descripcion-usuario {
+    color: #666;
+    margin-top: 10px;
+}
+
+.reseñas {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    align-items: flex-start;
+}
+
+.solicitudes-recientes {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.solicitudes-recientes h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.solicitudes-recientes p {
+    margin-top: 10px;
+    color: #666;
+}
+
+.btn-solicitudes {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.btn-solicitudes:hover {
+    background-color: #0056b3;
+}
+
+.saldo-usuario, .comision-usuario, .estadisticas-usuario {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.saldo-usuario h2, .comision-usuario h2, .estadisticas-usuario h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.saldo-usuario p, .comision-usuario p, .estadisticas-usuario p {
+    margin-top: 10px;
+    color: #666;
+}
+
+.btn-comision {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-comision:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.estadisticas-detalles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.estadistica {
+    text-align: center;
+    flex: 1;
+}
+
+.estadistica h3 {
+    margin-bottom: 10px;
+}
+
+.barra {
+    height: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.barra-verde {
+    background-color: #28a745;
+    width: 80%;
+}
+
+.barra-amarilla {
+    background-color: #ffc107;
+    width: 50%;
+}
+
+.barra-roja {
+    background-color: #dc3545;
+    width: 30%;
+}
+
+.btn-toggle-perfil {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-toggle-perfil:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .lado {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .centro {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 10px;
+    }
+
+    .lado, .centro {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .perfil-usuario, .reseñas, .solicitudes-recientes, .saldo-usuario, .comision-usuario, .estadisticas-usuario {
+        padding: 15px;
+    }
+
+    .foto-perfil {
+        width: 100px;
+        height: 100px;
+    }
+
+    .nombre-usuario {
+        font-size: 24px;
+    }
+}
+
+
