@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingreso a Hero Tutors</title>
     <link rel="stylesheet" href="css/login_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="Scripts/login.js"></script>
 </head>
 
 <body>
@@ -19,19 +21,31 @@
         <div class="comic-bubble">
             <p>¡Introduce tus credenciales, súper usuario!</p>
         </div>
-        <form class="login-form">
+        <form class="login-form" id="loginForm">
             <label for="username">Nombre de Súper Usuario</label>
             <input type="text" id="username" placeholder="Nombre de Super Usuario">
 
             <label for="password">Clave Secreta</label>
             <input type="password" id="password" placeholder="Clave Secreta">
 
+
+            <div id="error-message" class="error-message"></div>
+
             <button type="submit">Entrar a la Acción</button>
         </form>
-        <div class="comic-bubble small">
-            <p><a href="#" class="forgot-password">¡ZAP! ¡Olvidé mi clave secreta!</a></p>
+
+
+
+        <div class="link-text">
+            <p>¡ZAP! <a href="#">¡Olvidé mi clave secreta!</a></p>
+        </div>
+        <div class="link-text">
+            <p>¿Nuevo en la Liga? <a href="register.html">Únete a la Aventura</a></p>
         </div>
     </div>
+
+    <button class="back-button" onclick="window.history.back()"><i class="fas fa-arrow-left"></i>
+        Volver a la Base</button>
 
     <div class="side-panel right-panel">
         <iframe src="cinta_sos.html" style="width: 100%; height: 100%; border: none;"></iframe>

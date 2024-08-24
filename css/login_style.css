@@ -86,36 +86,66 @@ button {
     font-size: 1.2em;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
 }
 
 button:hover {
     background-color: #FF4500;
 }
 
-.comic-bubble.small {
-    margin-top: 15px;
-    font-size: 0.8em;
-    padding: 5px;
+.error-message {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffcccb;
+    color: #d8000c;
+    border: 2px solid #d8000c;
     border-radius: 5px;
-    max-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: bold;
+    display: none;
+    font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
+}
+
+.error-message::before {
+    content: "⚠️ ";
+}
+
+
+.link-text {
+    margin-top: 20px;
     text-align: center;
 }
 
-.comic-bubble.small a.forgot-password {
-    color: #ffffff;
+.link-text a {
+    color: #ff5722;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
-    padding: 2px 5px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 0 #000;
-    display: inline-block;
-    transform: rotate(-5deg);
+    font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
 }
 
-.comic-bubble.small a.forgot-password:hover {
+.link-text a:hover {
     text-decoration: underline;
-    transform: rotate(5deg);
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 12%;
+    background-color: #FFD700;
+    color: #000;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    /* Asegura que el botón esté por encima de otros elementos */
+}
+
+.back-button:hover {
+    background-color: #d32f2f;
 }
