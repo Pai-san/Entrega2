@@ -14,13 +14,14 @@ body {
 
 .strip-content {
     display: flex;
-    height: 200%;
+    height: 100%;
     flex-direction: column;
     animation: scroll-vertical 20s linear infinite;
 }
 
 .strip-content img {
     width: auto;
+    height: 200px;
     object-fit: cover;
     margin-bottom: 10px;
     border: 5px solid transparent;
