@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Ingreso a Hero Tutors</title>
+    <link rel="stylesheet" href="login_style.css">
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    
-    <!-- Your content goes here -->
-    
-    <script src="script.js"></script>
+    <div class="side-panel left-panel">
+        <img src="resources/hero1.png" alt="Hero 1">
+        <img src="resources/hero2.jpg" alt="Hero 2">
+    </div>
+
+    <div class="login-container">
+        <h1>Ingreso a Hero Tutors</h1>
+        <div class="comic-bubble">
+            <p>¡Introduce tus credenciales, súper usuario!</p>
+        </div>
+        <form class="login-form">
+            <label for="username">Nombre de Súper Usuario</label>
+            <input type="text" id="username" placeholder="Nombre de Super Usuario">
+
+            <label for="password">Clave Secreta</label>
+            <input type="password" id="password" placeholder="Clave Secreta">
+
+            <button type="submit">Entrar a la Acción</button>
+        </form>
+        <div class="comic-bubble small">
+            <p><a href="#" class="forgot-password">¡ZAP! ¡Olvidé mi clave secreta!</a></p>
+        </div>
+    </div>
+
+    <div class="side-panel right-panel">
+        <img src="resources/hero3.png" alt="Hero 3">
+        <img src="resources/hero4.png" alt="Hero 4">
+    </div>
 </body>
+
 </html>
