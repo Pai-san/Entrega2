@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fff; /* Fondo verde */
-  background-image: url('resources/background1.jpg'); /* Reemplaza con la ruta real de la imagen de fondo */
+  background-image: url('../resources/background1.jpg'); /* Reemplaza con la ruta real de la imagen de fondo */
   background-size: cover;
 }
 
@@ -20,7 +20,7 @@ body {
   position:fixed;
   z-index: 100;
   background-color: #fff;
-  background-image: url("resources/background1.jpg");
+  background-image: url("../resources/background1.jpg");
   background-repeat:no-repeat;
   background-size:cover;
   height:4rem;
@@ -55,7 +55,7 @@ body {
   text-align: center;
   color: white;
   overflow: hidden;
-  background-image: url("resources/Heropose.jpg");
+  background-image: url("../resources/Heropose.jpg");
   background-repeat: no-repeat;
   background-size:cover;
 }
@@ -103,7 +103,7 @@ body {
   z-index: 1;
   display: block;
   border: 0.5rem solid #151515;
-  background-image: url("resources/screaming-man.jpg");
+  background-image: url("../resources/screaming-man.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
