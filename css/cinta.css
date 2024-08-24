@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.movie-strip {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.strip-content {
+    display: flex;
+    height: 200%;
+    flex-direction: column;
+    animation: scroll-vertical 20s linear infinite;
+}
+
+.strip-content img {
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(45deg, #FFD700, #FF4500);
+    border-image-slice: 1;
+    box-shadow: 0 0 10px 5px rgba(255, 165, 0, 0.8);
+}
+
+.rotate-1 {
+    transform: rotate(-1deg);
+}
+
+.rotate-2 {
+    transform: rotate(1deg);
+}
+
+@keyframes scroll-vertical {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
