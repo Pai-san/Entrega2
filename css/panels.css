@@ -1,0 +1,27 @@
+.side-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+}
+
+.left-panel {
+    left: 0;
+}
+
+.right-panel {
+    right: 0;
+}
+
+.side-panel img {
+    width: 100%;
+    margin: 10px 0;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+}
