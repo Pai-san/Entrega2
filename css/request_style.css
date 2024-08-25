@@ -251,21 +251,3 @@ ul {
     color: green;
 }
 
-@media (max-width: 1540px) {
-    .tm-header {
-        width: 320px;
-    }
-
-    .tm-main {
-        margin-left: 320px;
-        width: calc(100% - 320px);
-    }
-}
-
-@media (max-width: 1300px) {
-    .tm-about-col {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 30px;
-    }
-}
