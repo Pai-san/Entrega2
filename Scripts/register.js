@@ -89,3 +89,11 @@ document.getElementById('phone').addEventListener('input', function (event) {
         phoneError.style.display = 'none';
     }
 });
+
+function redirectToLogin() {
+    setTimeout(function() {
+        window.location.href = 'login.html';
+    }, 500); // 3000 milisegundos = 3 segundos
+}
+
+// Llamar a la función para redirigir automáticamente después de mostrar el mensaje

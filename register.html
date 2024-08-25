@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <button class="back-button" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i>
+        Volver a la Base</button>
     <div class="container register-container">
         <h1>Registro de Súper Usuario</h1>
         <form id="registerForm">
@@ -51,13 +53,12 @@
             ¡Ya formas parte de la Liga de la Justicia!
         </div>
     </div>
-    <div class="side-panel right-panel">
-        <iframe src="cinta_sos.html" style="width: 100%; height: 100%; border: none;"></iframe>
-    </div>
+    
     <div id="comic-alert" class="comic-alert">
         <div class="comic-alert-content">
             <p>¡Ya formas parte de la Liga de la Justicia! <br> En unos segundos, te teletransportaremos para que
                 inicies sesión</p>
+            <button id="start-mission" onclick="redirectToLogin()">Aceptar Misión</button>
         </div>
     </div>
     <script src="Scripts/register.js"></script>
