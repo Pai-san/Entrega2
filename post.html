@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/post-style.css" rel="stylesheet">
-    <title>Post Webpage</title>
+    <title>Post</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Personal Information and Description</h1>
-        <p>About Himself</p>
-    </div>
-    <div class="comments">
-        <div class="comment">
-            <p class="username">@PepinoToxico</p>
-            <p>Thank you for the React course, it was very amazing</p>
-            <p class="stars">★★★★★</p>
+    <div class="header-panel">
+        <div class="panel-usuario">
+            <img src="resources/perfil_2.png" alt="Foto de perfil" class="foto-perfil">
+            <div class="info-usuario">
+                <a href="Perfil_Heroe.html" class="username">Nombre de usuario</a>
+                <h3 class="tipo-usuario">Tipo: Normal user / Hero user</h3>
+                <p class="descripcion-usuario">Esta es una breve descripción del usuario. Aquí puedes agregar más detalles sobre el usuario, su ocupación, intereses, etc.</p>
+            </div>
         </div>
-        <div class="comment">
-            <p class="username">@Anguila_Electrica</p>
-            <p>I didn't have a good experience with him, sometimes he was very lost explaining dark holes</p>
-            <p class="stars">★★★☆☆</p>
+        <div class="panel-asunto">
+            <h4>I dropped my ice cream</h4>
+            <p>A young boy's face turned sad as his ice cream slipped from his hand and splattered on the ground. He looked up with teary eyes and asked, "Can someone help me?"</p>
         </div>
-        <div class="comment">
-            <p class="username">@Naked_Snake</p>
-            <p>It reminded me of my old and good BigBoss when she taught me CQC</p>
-            <p class="stars">★★★★★</p>
+        <div class="panel-imagen">
         </div>
+        <div class="panel-ubicacion">
+            <h4>Ubicación</h4>
+            <p>Un lugar muy muy lejano Cll.80 Crr.26#A</p>
+        </div>
+        <button class="back-button" onclick="window.history.back()"><i class="fas fa-arrow-left"></i>
+            REGRESAR</button>
+        
     </div>
 </body>
 </html>
