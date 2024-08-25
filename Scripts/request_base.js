@@ -14,7 +14,35 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+
+    const allButton = document.querySelector('.all-button');
+    const highButton = document.querySelector('.high-button');
+    const mediumButton = document.querySelector('.medium-button');
+    const lowButton = document.querySelector('.low-button');
+
+
+
+    allButton.addEventListener('click', () => filterPosts('post'));
+    highButton.addEventListener('click', () => filterPosts('high'));
+    mediumButton.addEventListener('click', () => filterPosts('medium'));
+    lowButton.addEventListener('click', () => filterPosts('low'));
 });
+
+function filterPosts(filter) {
+    const posts = document.querySelectorAll('.post');
+    console.log(filter);
+    posts.forEach(post => {
+        if (filter === 'all' || post.classList.contains(filter)) {
+            post.style.display = 'inline-block';
+        } else {
+            post.style.display = 'none';
+        }
+    });
+}
+
+
+
 
 
 
