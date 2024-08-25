@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Súper Usuario</title>
     <link rel="stylesheet" href="css/style_register.css">
+    <link rel="stylesheet" href="css/alert_style.css">
+    <link rel="stylesheet" href="css/panels.css">
 </head>
+
 <body>
-    <button class="back-button" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i>
-        Volver a la Base</button>
     <div class="container register-container">
         <h1>Registro de Súper Usuario</h1>
         <form id="registerForm">
             <label for="name">Nombre de Súper Usuario:</label>
             <input type="text" id="name" name="name" required>
             <span id="nameError" style="display:none; color:red; font-size:0.9em; margin-top:5px;"></span>
-            
+
             <label for="email">Correo Heroico:</label>
             <input type="email" id="email" name="email" required>
             <span id="emailError" style="display:none; color:red; font-size:0.9em; margin-top:5px;"></span>
-            
+
             <label for="phone">Bat-Teléfono:</label>
             <input type="tel" id="phone" name="phone" required>
             <span id="phoneError" style="display:none; color:red; font-size:0.9em; margin-top:5px;"></span>
-            
+
             <label for="address">Ubicación secreta:</label>
             <input type="text" id="address" name="address" required>
             <span id="addressError" style="display:none; color:red; font-size:0.9em; margin-top:5px;"></span>
-            
+
             <label for="job">Misión de Héroe:</label>
             <select id="job" name="job" required>
                 <option value="student">Estudiante</option>
@@ -35,20 +37,30 @@
                 <option value="na">N/A</option>
             </select>
             <span id="jobError" style="display:none; color:red; font-size:0.9em; margin-top:5px;"></span>
-            
+
             <label for="password">Clave Secreta:</label>
             <input type="password" id="password" name="password" required>
-            
+
             <label for="confirmPassword">Confirmar Clave Secreta:</label>
             <input type="password" id="confirmPassword" name="confirmPassword" required>
             <span id="passwordError" style="display:none; color:red; font-size:0.9em; margin-top:5px;"></span>
-            
+
             <button type="submit">Iniciar misión</button>
         </form>
         <div class="confirmation-message" id="confirmationMessage">
             ¡Ya formas parte de la Liga de la Justicia!
         </div>
     </div>
+    <div class="side-panel right-panel">
+        <iframe src="cinta_sos.html" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+    <div id="comic-alert" class="comic-alert">
+        <div class="comic-alert-content">
+            <p>¡Ya formas parte de la Liga de la Justicia! <br> En unos segundos, te teletransportaremos para que
+                inicies sesión</p>
+        </div>
+    </div>
     <script src="Scripts/register.js"></script>
 </body>
+
 </html>
