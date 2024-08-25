@@ -10,12 +10,11 @@ function checkAuth() {
 }
 
 function redirectToLogin() {
-    window.location.href = 'login.html';
-
+    window.location.replace('login.html');
 }
 
 
 function logoutUser() {
     sessionStorage.removeItem('isLoggedIn');
-    window.location.href = 'login.html';
+    window.location.replace('login.html');
 }

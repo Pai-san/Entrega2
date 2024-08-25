@@ -1,94 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_perfil.css">
-    <title>Comic Book Page</title>
+    <script src="Scripts/auth.js"></script>
+    <title>Profile Page</title>
 </head>
+
 <body>
-<div class="contenedor">
-    <div class="lado izquierdo">
-        <div class="solicitudes-recientes">
-            <h2>Solicitudes Recientes</h2>
-            <p>No tienes solicitudes recientes</p>
+    <div class="contenedor">
+        <div class="lado izquierdo">
+            <div class="solicitudes-recientes">
+                <h2>Solicitudes Recientes</h2>
+                <p>No tienes solicitudes recientes</p>
+            </div>
+            <a href="requestbase.html" class="btn-solicitudes">Ir al centro de solicitudes</a>
+            <button class="btn-toggle-perfil">Héroe/Civil</button>
+
+            <div class="cerrar-sesion">
+                <button class="btn-cerrar-sesion" onclick="logoutUser()">Cerrar Sesión</button>
+            </div>
         </div>
-        <a href="requestbase.html" class="btn-solicitudes">Ir al centro de solicitudes</a>
-        <button class="btn-toggle-perfil">Héroe/Civil</button>
+        <div class="centro">
+            <div class="perfil-usuario">
+                <img src="resources/perfil_2.png" alt="Foto de perfil" class="foto-perfil">
+                <div class="info-usuario">
+                    <h2 class="nombre-usuario">Nombre del Usuario</h2>
+                    <h3 class="tipo-usuario">Tipo: Normal user / Hero user</h3>
+                    <p class="descripcion-usuario">Esta es una breve descripción del usuario. Aquí puedes agregar más
+                        detalles sobre el usuario, su ocupación, intereses, etc.</p>
+                </div>
+            </div>
+            <div class="reseñas">
+                <h1>Últimas reseñas</h1>
+
+                <div id="lista-reseñas">
+                    <div class="comentario">
+                        <p>No tienes reseñas recientes</p>
+                    </div>
+                </div>
+
+                <div class="paginacion">
+                    <button id="prev-page">Anterior</button>
+                    <button id="next-page">Siguiente</button>
+                </div>
+
+                <div class="nuevo-comentario comment">
+                    <textarea id="nuevo-comentario" placeholder="Escribe tu reseña aquí..."></textarea>
+                    <div class="estrellas">
+                        <span class="estrella" data-value="1">&#9733;</span>
+                        <span class="estrella" data-value="2">&#9733;</span>
+                        <span class="estrella" data-value="3">&#9733;</span>
+                        <span class="estrella" data-value="4">&#9733;</span>
+                        <span class="estrella" data-value="5">&#9733;</span>
+                    </div>
+                    <button id="agregar-comentario" class="btn-agregar-reseña">Agregar comentario</button>
+                    <input type="hidden" id="calificacion" value="0">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="lado derecho">
+            <div class="saldo-usuario">
+                <h2>Saldo del Usuario</h2>
+                <p id="saldo">$0.00</p>
+            </div>
+            <div class="comision-usuario">
+                <h2>Recargar Saldo</h2>
+                <div class="recargar-contenedor">
+                    <input type="number" id="monto" placeholder="Ingresa el monto">
+                    <button class="btn-comision" onclick="recargarSaldo()">Recargar</button>
+                </div>
+            </div>
+            <div class="estadisticas-usuario">
+                <h2>Estadísticas del Usuario</h2>
+                <p>Solicitudes Resueltas: 0</p>
+                <p>Calificación: 0 estrellas</p>
+                <p>Último día de actividad: N/A</p>
+                <div class="estadisticas-detalles">
+                    <div class="estadistica">
+                        <h3>Puntualidad</h3>
+                        <div class="barra barra-verde"></div>
+                    </div>
+                    <div class="estadistica">
+                        <h3>Eficiencia</h3>
+                        <div class="barra barra-amarilla"></div>
+                    </div>
+                    <div class="estadistica">
+                        <h3>Atención</h3>
+                        <div class="barra barra-roja"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="centro">
-        <div class="perfil-usuario">
-            <img src="resources/perfil_2.png" alt="Foto de perfil" class="foto-perfil">
-            <div class="info-usuario">
-                <h2 class="nombre-usuario">Nombre del Usuario</h2>
-                <h3 class="tipo-usuario">Tipo: Normal user / Hero user</h3>
-                <p class="descripcion-usuario">Esta es una breve descripción del usuario. Aquí puedes agregar más detalles sobre el usuario, su ocupación, intereses, etc.</p>
-            </div>
-        </div>
-        <div class="reseñas">
-            <h1>Últimas reseñas</h1>
-
-            <div id="lista-reseñas">
-                <div class="comentario">
-                    <p>No tienes reseñas recientes</p>
-                </div>
-            </div>
-
-            <div class="paginacion">
-                <button id="prev-page">Anterior</button>
-                <button id="next-page">Siguiente</button>
-            </div>
-
-            <div class="nuevo-comentario comment">
-                <textarea id="nuevo-comentario" placeholder="Escribe tu reseña aquí..."></textarea>
-                <div class="estrellas">
-                    <span class="estrella" data-value="1">&#9733;</span>
-                    <span class="estrella" data-value="2">&#9733;</span>
-                    <span class="estrella" data-value="3">&#9733;</span>
-                    <span class="estrella" data-value="4">&#9733;</span>
-                    <span class="estrella" data-value="5">&#9733;</span>
-                </div>
-                <button id="agregar-comentario" class="btn-agregar-reseña">Agregar comentario</button>
-                <input type="hidden" id="calificacion" value="0">
-            </div>
-        </div>
-
-
-    </div>
-    <div class="lado derecho">
-        <div class="saldo-usuario">
-            <h2>Saldo del Usuario</h2>
-            <p id="saldo">$0.00</p>
-        </div>
-        <div class="comision-usuario">
-            <h2>Recargar Saldo</h2>
-            <div class="recargar-contenedor">
-                <input type="number" id="monto" placeholder="Ingresa el monto">
-                <button class="btn-comision" onclick="recargarSaldo()">Recargar</button>
-            </div>
-        </div>
-        <div class="estadisticas-usuario">
-            <h2>Estadísticas del Usuario</h2>
-            <p>Solicitudes Resueltas: 0</p>
-            <p>Calificación: 0 estrellas</p>
-            <p>Último día de actividad: N/A</p>
-            <div class="estadisticas-detalles">
-                <div class="estadistica">
-                    <h3>Puntualidad</h3>
-                    <div class="barra barra-verde"></div>
-                </div>
-                <div class="estadistica">
-                    <h3>Eficiencia</h3>
-                    <div class="barra barra-amarilla"></div>
-                </div>
-                <div class="estadistica">
-                    <h3>Atención</h3>
-                    <div class="barra barra-roja"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="Scripts/script_perfil.js"></script>
+    <script src="Scripts/script_perfil.js"></script>
+    <script>
+        if (!checkAuth()) {
+            logoutUser();
+        }
+    </script>
 </body>
+
 </html>

@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
+    font-family: 'Comic Sans MS';
 }
 
 .contenedor {
@@ -33,7 +34,7 @@ body {
     z-index: 1;
 }
 
-.contenedor > * {
+.contenedor>* {
     position: relative;
     z-index: 2;
 }
@@ -107,8 +108,8 @@ body {
     width: 100%;
     max-width: 800px;
     align-items: flex-start;
-    max-height: 500px; /* Ajusta la altura según sea necesario */
-    overflow-y: auto;  /* Agrega desplazamiento vertical */
+    max-height: 500px;
+    overflow-y: auto;
 
 
 }
@@ -116,7 +117,7 @@ body {
 .nuevo-comentario {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacio entre los elementos */
+    gap: 15px;
     width: 100%;
 }
 
@@ -124,9 +125,9 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%; /* Ajusta al ancho del contenedor */
-    height: 150px; /* Ajusta la altura según tus necesidades */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
 }
 
 .estrellas {
@@ -137,16 +138,16 @@ body {
 .estrella {
     font-size: 24px;
     cursor: pointer;
-    color: #ccc; /* Color de estrella vacía */
+    color: #ccc;
 }
 
 .estrella.seleccionada {
-    color: #FFD700; /* Color de estrella seleccionada */
+    color: #FFD700;
 }
 
 .btn-agregar-reseña {
     padding: 10px 20px;
-    background-color: #2868a7; /* Color de fondo igual al de recargar saldo */
+    background-color: #2868a7;
     color: white;
     border: none;
     border-radius: 5px;
@@ -155,7 +156,7 @@ body {
 }
 
 .btn-agregar-reseña:hover {
-    background-color: #218838; /* Color de fondo al pasar el ratón igual al de recargar saldo */
+    background-color: #218838;
     transform: scale(1.05);
 }
 
@@ -206,7 +207,9 @@ body {
     background-color: #0056b3;
 }
 
-.saldo-usuario, .comision-usuario, .estadisticas-usuario {
+.saldo-usuario,
+.comision-usuario,
+.estadisticas-usuario {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -217,12 +220,16 @@ body {
     margin-bottom: 20px;
 }
 
-.saldo-usuario h2, .comision-usuario h2, .estadisticas-usuario h2 {
+.saldo-usuario h2,
+.comision-usuario h2,
+.estadisticas-usuario h2 {
     margin: 0;
     font-size: 24px;
 }
 
-.saldo-usuario p, .comision-usuario p, .estadisticas-usuario p {
+.saldo-usuario p,
+.comision-usuario p,
+.estadisticas-usuario p {
     margin-top: 10px;
     color: #666;
 }
@@ -230,7 +237,7 @@ body {
 .recargar-contenedor {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espacio entre el cuadro de entrada y el botón */
+    gap: 10px;
 }
 
 #monto {
@@ -303,6 +310,7 @@ body {
     text-align: center;
     cursor: pointer;
     margin-top: 20px;
+    font-family: 'Comic Sans MS';
 }
 
 .btn-toggle-perfil:hover {
@@ -329,12 +337,18 @@ body {
         padding: 10px;
     }
 
-    .lado, .centro {
+    .lado,
+    .centro {
         padding: 10px;
         max-width: 100%;
     }
 
-    .perfil-usuario, .reseñas, .saldo-usuario, .comision-usuario, .estadisticas-usuario, .solicitudes-recientes {
+    .perfil-usuario,
+    .reseñas,
+    .saldo-usuario,
+    .comision-usuario,
+    .estadisticas-usuario,
+    .solicitudes-recientes {
         width: 100%;
         padding: 10px;
     }
@@ -381,4 +395,25 @@ body {
 
 .paginacion button:hover {
     background-color: #0056b3;
+}
+
+.cerrar-sesion {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-cerrar-sesion {
+    background-color: #d32f2f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Comic Sans MS';
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #c62828;
 }
