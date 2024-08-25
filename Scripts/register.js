@@ -1,6 +1,6 @@
-document.getElementById('registerForm').addEventListener('submit', function(event) {
+document.getElementById('registerForm').addEventListener('submit', function (event) {
     event.preventDefault();
-    
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
@@ -67,17 +67,17 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     }
 
     if (isValid) {
-        
-        const confirmationMessage = document.getElementById('confirmationMessage');
-        confirmationMessage.style.display = 'block';
-        setTimeout(function() {
+
+        document.getElementById('comic-alert').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+        setTimeout(function () {
             window.location.href = 'login.html';
-        }, 2000);
-        
+        }, 3000);
+
     }
 });
 
-document.getElementById('phone').addEventListener('input', function(event) {
+document.getElementById('phone').addEventListener('input', function (event) {
     const phone = event.target.value;
     const phoneError = document.getElementById('phoneError');
     const phoneRegex = /^\d{10}$/;
