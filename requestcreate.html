@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/panels.css">
+
   <title>Crear Solicitud</title>
   <style>
     body {
@@ -19,6 +21,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
+
     }
 
     .login-container {
@@ -97,10 +100,7 @@
       cursor: pointer;
       transition: background-color 0.3s;
       font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
-      display: block;
-      /* Asegura que el botón es un bloque para que el margen automático funcione */
-      margin: 0 auto;
-      /* Centra el botón horizontalmente */
+
     }
 
     button:hover {
@@ -111,30 +111,56 @@
 
 <body>
 
-  <div class="form-container">
-    <h2>Crear Solicitud</h2>
-    <form action="/submit-request" method="post"> <!-- Replace with your actual submission URL -->
-      <input type="text" class="input-field" name="subject" placeholder="Asunto">
-      <textarea type="text" class="input-field" name="description" placeholder="Descripción"></textarea>
-      <input type="integer" class="input-field" name="reward" placeholder="Recompensa">
-      <h2>Importancia</h2>
-      <select class="select-box" name="importance">
-        <option value="HIGH">HIGH</option>
-        <option value="MEDIUM">MEDIUM</option>
-        <option value="LOW">LOW</option>
-      </select>
-      <button type="button" class="submit-button" id="next-step">Siguiente</button>
-    </form>
+  <div id="stepper-container" class="form-container">
+    <!-- Step 1: Crear Solicitud -->
+    <div id="step-1" class="step">
+      <h2>Crear Solicitud</h2>
+      <form id="form-step-1">
+        <input type="text" class="input-field" name="subject" placeholder="Asunto">
+        <textarea class="input-field" name="description" placeholder="Descripción"></textarea>
+        <input type="number" class="input-field" name="reward" placeholder="Recompensa">
+        <h2>Importancia</h2>
+        <select class="select-box" name="importance">
+          <option value="HIGH">HIGH</option>
+          <option value="MEDIUM">MEDIUM</option>
+          <option value="LOW">LOW</option>
+        </select>
+        <div class="stepper-buttons">
+          <button type="button" id="next-step-1" class="submit-button">Siguiente</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Step 2: Agregar Método de Pago -->
+    <div id="step-2" class="step" style="display: none;">
+      <h2>Agregar Método de Pago</h2>
+      <form id="form-step-2">
+        <input type="text" class="input-field" name="cardholder_name" placeholder="Nombre en la tarjeta">
+        <input type="text" class="input-field" name="card_number" placeholder="Número de tarjeta">
+        <input type="text" class="input-field" name="expiry_date" placeholder="Fecha de expiración (MM/AA)">
+        <input type="text" class="input-field" name="cvv" placeholder="CVV">
+        <div class="stepper-buttons">
+          <button type="button" id="prev-step-2" class="submit-button">Atrás</button>
+
+          <button type="submit" class="submit-button" formaction="requestbase.html">Enviar solicitud</button>
+        </div>
+      </form>
+    </div>
   </div>
 
-
   <script>
-    document.getElementById('next-step').addEventListener('click', function () {
-      // Redirige al segundo paso
-      window.location.href = 'requestbase.html'; // Cambia esta URL a la página del segundo paso
+    document.getElementById('next-step-1').addEventListener('click', function () {
+      document.getElementById('step-1').style.display = 'none';
+      document.getElementById('step-2').style.display = 'block';
+    });
+
+    document.getElementById('prev-step-2').addEventListener('click', function () {
+      document.getElementById('step-2').style.display = 'none';
+      document.getElementById('step-1').style.display = 'block';
     });
   </script>
 
 </body>
+
 
 </html>
