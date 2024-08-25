@@ -86,17 +86,25 @@
       color: #333;
     }
 
-    .submit-button {
-      width: calc(100% - 20px);
-      padding: 10px;
+    button {
+      align-self: center;
       background-color: #388e3c;
       color: white;
-      text-align: center;
-      display: block;
-      margin: auto;
-      font-size: large;
-      border: none;
+      padding: 10px 20px;
+      border: 2px solid white;
+      border-radius: 5px;
+      font-size: 1.2em;
       cursor: pointer;
+      transition: background-color 0.3s;
+      font-family: 'Comic Sans MS', 'Comic Neue', sans-serif;
+      display: block;
+      /* Asegura que el botón es un bloque para que el margen automático funcione */
+      margin: 0 auto;
+      /* Centra el botón horizontalmente */
+    }
+
+    button:hover {
+      background-color: #FF4500;
     }
   </style>
 </head>
@@ -115,9 +123,17 @@
         <option value="MEDIUM">MEDIUM</option>
         <option value="LOW">LOW</option>
       </select>
-      <button type="submit" class="submit-button" formaction="requestbase.html">Enviar Solicitud</button>
+      <button type="button" class="submit-button" id="next-step">Siguiente</button>
     </form>
   </div>
+
+
+  <script>
+    document.getElementById('next-step').addEventListener('click', function () {
+      // Redirige al segundo paso
+      window.location.href = 'requestbase.html'; // Cambia esta URL a la página del segundo paso
+    });
+  </script>
 
 </body>
 
