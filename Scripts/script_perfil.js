@@ -4,8 +4,29 @@ document.addEventListener("DOMContentLoaded", function() {
     const tipoUsuario = document.querySelector(".tipo-usuario");
     const descripcionUsuario = document.querySelector(".descripcion-usuario");
     const fotoPerfil = document.querySelector(".foto-perfil");
+    const heroPromotionBtn = document.getElementById('hero-promotion-btn');
 
     let isHero = false;
+
+    function updateHeroPromotionButton() {
+        if (isHero) {
+            heroPromotionBtn.disabled = true;  // Deshabilitar el botón en modo Héroe
+            heroPromotionBtn.classList.add('disabled');
+        } else {
+            heroPromotionBtn.disabled = false;  // Habilitar el botón en modo Civil
+            heroPromotionBtn.classList.remove('disabled');
+        }
+    }
+
+    function showPromotionMessage() {
+        alert('Su Hero promotion request está siendo tramitada');
+    }
+
+    heroPromotionBtn.addEventListener("click", function() {
+        if (!isHero) {
+            showPromotionMessage();
+        }
+    });
 
     toggleButton.addEventListener("click", function() {
         if (isHero) {
@@ -20,8 +41,13 @@ document.addEventListener("DOMContentLoaded", function() {
             fotoPerfil.src = "resources/hero_profile.jpg";
         }
         isHero = !isHero;
+        updateHeroPromotionButton();
     });
+
+    // Configuración inicial del botón de promoción
+    updateHeroPromotionButton();
 });
+
 
 function recargarSaldo() {
     let saldoElement = document.getElementById("saldo");
@@ -102,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Reseña 5...',
         'Reseña 6...',
         'Reseña 7...',
-        // Agrega más reseñas según sea necesario
+
     ];
     const reseñasPorPagina = 5;
     let paginaActual = 1;
@@ -147,6 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
     mostrarReseñas();
     actualizarPaginacion();
 });
+
+
+
 
 
 

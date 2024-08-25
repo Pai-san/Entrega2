@@ -17,13 +17,17 @@
         <button class="btn-toggle-perfil">Héroe/Civil</button>
     </div>
     <div class="centro">
+
         <div class="perfil-usuario">
+
             <img src="resources/perfil_2.png" alt="Foto de perfil" class="foto-perfil">
             <div class="info-usuario">
                 <h2 class="nombre-usuario">Nombre del Usuario</h2>
                 <h3 class="tipo-usuario">Tipo: Normal user / Hero user</h3>
                 <p class="descripcion-usuario">Esta es una breve descripción del usuario. Aquí puedes agregar más detalles sobre el usuario, su ocupación, intereses, etc.</p>
             </div>
+            <button id="hero-promotion-btn" class="btn-hero-promotion">Hero promotion</button>
+
         </div>
         <div class="reseñas">
             <h1>Últimas reseñas</h1>
@@ -34,10 +38,7 @@
                 </div>
             </div>
 
-            <div class="paginacion">
-                <button id="prev-page">Anterior</button>
-                <button id="next-page">Siguiente</button>
-            </div>
+
 
             <div class="nuevo-comentario comment">
                 <textarea id="nuevo-comentario" placeholder="Escribe tu reseña aquí..."></textarea>
@@ -50,6 +51,10 @@
                 </div>
                 <button id="agregar-comentario" class="btn-agregar-reseña">Agregar comentario</button>
                 <input type="hidden" id="calificacion" value="0">
+                <div class="paginacion">
+                    <button id="prev-page">Anterior</button>
+                    <button id="next-page">Siguiente</button>
+                </div>
             </div>
         </div>
 
