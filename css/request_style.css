@@ -12,19 +12,9 @@ body {
 }
 
 
-.form-control::-webkit-input-placeholder {
-    color: #999;
-}
 
-.form-control:-ms-input-placeholder {
-    color: #999;
-}
 
-.form-control::placeholder {
-    color: #999;
-}
-
-.tm-header {
+.header {
     background-color: rgb(55, 58, 59);
     background-image: url("../resources/blacklinesbg.jpg");
     background-repeat: no-repeat;
@@ -35,7 +25,7 @@ body {
     left: 0;
     bottom: 0;
     z-index: 100;
-    width: 20rem;
+    width: 18rem;
     overflow-y: visible;
 }
 
@@ -44,7 +34,7 @@ body {
     width: 70%;
 }
 
-.tm-header-wrapper {
+.header-wrapper {
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -53,18 +43,18 @@ body {
     height: 100%;
 }
 
-.tm-header-wrapper::-webkit-scrollbar {
+.header-wrapper::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
 
-.tm-site-header {
-    margin-top: 50px;
+.site-header {
+    margin-top: 20px;
     margin-bottom: 115px;
 }
 
-.tm-main {
-    margin-left: 20rem;
+.main {
+    margin-left: 16rem;
     padding: 5rem 5rem 2rem;
     height: 100%;
     background-color: #fff;
@@ -75,40 +65,40 @@ body {
 
 }
 
-.tm-nav {
+.nav {
     margin-bottom: 100px;
 }
 
-.tm-nav-item {
+.nav-item {
     list-style: none;
     margin-bottom: 30px;
 }
 
-.tm-nav-link {
+.nav-link {
     color: #fff;
     background-color: transparent;
     height: 3rem;
     width: 100%;
-    width: 15rem;
+    width: 14rem;
     display: flex;
     align-items: center;
     font-size: 1.3rem;
     padding: 2rem;
 }
 
-.tm-nav-item:hover .tm-nav-link,
-.tm-nav-item.active .tm-nav-link {
+.nav-item:hover .nav-link,
+.nav-item.active .nav-link {
     color: #fff;
     background-color: rgb(47, 45, 45);
     text-decoration: none;
 }
 
-.tm-nav ul {
+.nav ul {
     position: relative;
 }
 
-.tm-nav-item:hover:after,
-.tm-nav-item.active:after {
+.nav-item:hover:after,
+.nav-item.active:after {
     content: '';
     width: 100%;
     max-width: 300px;
@@ -121,7 +111,7 @@ body {
     z-index: -1000;
 }
 
-.tm-nav-link i {
+.nav-link i {
     margin-right: 37px;
 }
 
@@ -130,21 +120,19 @@ ul {
     padding: 0;
 }
 
-.tm-nav {
-    margin-left: -30px;
-}
 
-.tm-row {
+
+.req-row {
 
     justify-content: space-between;
 }
 
-.tm-search-form {
+.search-form {
     display: flex;
     justify-content: flex-start;
 }
 
-.tm-high-button {
+.high-button {
     width: 4rem;
     height: 3rem;
     border-radius: 0.25rem;
@@ -156,7 +144,7 @@ ul {
     color: white;
 }
 
-.tm-medium-button {
+.medium-button {
     width: 4rem;
     height: 3rem;
     border-radius: 0.25rem;
@@ -168,7 +156,7 @@ ul {
     color: white;
 }
 
-.tm-low-button {
+.low-button {
     width: 4rem;
     height: 3rem;
     border-radius: 0.25rem;
@@ -180,7 +168,7 @@ ul {
     color: white;
 }
 
-.tm-post {
+.post {
 
     max-width: 350px;
     height: 300px;
@@ -198,7 +186,7 @@ ul {
     box-shadow: 8px 6px 4px 2px #000;
 }
 
-.tm-post-title {
+.post-title {
     font-size: 1rem;
     font-weight: 700;
     color: #fff;
@@ -261,81 +249,6 @@ ul {
 
 .text-low {
     color: green;
-}
-
-
-
-
-
-
-
-
-
-
-
-.tm-pt-20 {
-    padding-top: 20px;
-    margin-right: 1px;
-}
-
-.tm-pt-30 {
-    padding-top: 0, 5rem;
-    margin-right: 1px;
-}
-
-.tm-pt-45 {
-    padding-top: 0, 3rem;
-    margin-right: 1px;
-}
-
-.tm-pt-60 {
-    padding-top: 0, 3rem;
-    margin-right: 1px;
-}
-
-.tm-mb-40 {
-    margin-bottom: 40px;
-}
-
-.tm-mb-45 {
-    margin-bottom: 45px;
-    margin-right: 1px;
-}
-
-.tm-mb-55 {
-    margin-bottom: 55px;
-}
-
-.tm-mb-60 {
-    margin-bottom: 60px;
-}
-
-.tm-mb-65 {
-    margin-bottom: 65px;
-}
-
-.tm-mb-75 {
-    margin-bottom: 75px;
-}
-
-.tm-mb-80 {
-    margin-bottom: 80px;
-}
-
-.tm-mb-120 {
-    margin-bottom: 120px;
-}
-
-.tm-mt-40 {
-    margin-top: 40px;
-}
-
-.tm-mt-100 {
-    margin-top: 100px;
-}
-
-.tm-mr-20 {
-    margin-right: 20px;
 }
 
 @media (max-width: 1540px) {
