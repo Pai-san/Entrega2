@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/style_register.css">
     <link rel="stylesheet" href="css/alert_style.css">
     <link rel="stylesheet" href="css/panels.css">
+    <link rel="stylesheet" href="css/back_button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <button class="back-button" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i>
+    <button class="back-button" id="back-button-fixed" onclick="window.history.back()"><i class="fas fa-arrow-left"></i>
         Volver a la Base</button>
     <div class="container register-container">
         <h1>Registro de Súper Usuario</h1>
@@ -53,7 +55,7 @@
             ¡Ya formas parte de la Liga de la Justicia!
         </div>
     </div>
-    
+
     <div id="comic-alert" class="comic-alert">
         <div class="comic-alert-content">
             <p>¡Ya formas parte de la Liga de la Justicia! <br> En unos segundos, te teletransportaremos para que
