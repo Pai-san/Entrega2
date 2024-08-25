@@ -13,5 +13,6 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
 
 
     errorMessage.style.display = 'none';
-    window.location.href = 'Perfil_Heroe.html';
+
+    loginUser();
 });

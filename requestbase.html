@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/request_style.css" rel="stylesheet">
+    <script src="Scripts/auth.js"></script>
+    <script src="Scripts/request_base.js"></script>
+    <link rel="stylesheet" href="css/alert_style.css">
     <title>REQUESTS</title>
 </head>
+
 <body>
+    <div id="overlay" class="overlay"></div>
     <header class="header" id="header">
         <div class="header-wrapper">
             <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
-               
+
             </button>
-            <div class="site-header">           
+            <div class="site-header">
                 <h1 class="text-center">HEROTUTOR</h1>
             </div>
-            <nav class="nav" id="nav">            
+            <nav class="nav" id="nav">
                 <ul>
                     <li class="nav-item active">
                         <a href="javascript:void(0);" class="nav-link" onclick="history.back()">
-                          Regresar
+                            Regresar
                         </a>
-                      </li>
-                    <li class="nav-item"><a href="requestcreate.html" class="nav-link">
-                        Crear request
-                    </a></li>
-                    <li class="nav-item"><a href="Perfil_Heroe.html" class="nav-link">
-                        Cuenta
-                    </a></li>
+                    </li>
+                    <li class="nav-item protected-content"><a href="requestcreate.html" class="nav-link">
+                            Crear request
+                        </a></li>
+                    <li class="nav-item protected-content"><a href="Perfil_Heroe.html" class="nav-link">
+                            Cuenta
+                        </a></li>
                 </ul>
             </nav>
         </div>
@@ -35,37 +41,31 @@
     <div class="container-fluid">
         <main class="main">
             <!-- Search form -->
-            <div class="row req-row">
-                <div class="col-12">
-                    <form method="GET" class="form-inline search-form">   
-                                 
-                        <button class="high-button" type="submit">
-                            HIGH
-                        </button>
-                        <button class="medium-button" type="submit">
-                            MEDIUM
-                        </button>    
-                        <button class="low-button" type="submit">
-                            LOW
-                        </button>                                  
-                    </form>
-                </div>                
+            <div class="row req-row ">
+                <div class="col-4 form-inline">
+                    <button class="all-button" style="padding: 0px; margin: 0 10px;">Todos</button>
+                    <button class="high-button" style="padding: 0px; margin: 0 10px;">HIGH</button>
+                    <button class="medium-button" style="padding: 0px; margin: 0 10px;">MEDIUM</button>
+                    <button class="low-button" style="padding: 0px; margin: 0 10px;">LOW</button>
+
+                </div>
             </div>
             <div class="row req-row">
-                <article class="post">
+                <article class="post high">
                     <hr>
                     <div class="post-header">
                         <a href="post.html" class="title-post">
                             <h2 class="post-title">MI HELADO</h2>
                         </a>
                         <button class="accept-button">Accept</button>
-                    </div>   
+                    </div>
                     <div class="status-indicator">
                         <span class="status-circle status-high"></span>
                         <span class="status-text text-high">HIGH</span>
-                    </div>                   
+                    </div>
                     <p class="article-content">
-                        Estaba comiendo un helado y mientras bajaba las escaleras se me cayo al suelo, alguien me puede ayudar? era de crepes and waffles y estaba muy rico ahora quiero llorar. 
+                        Estaba comiendo un helado y mientras bajaba las escaleras se me cayo al suelo, alguien me puede
+                        ayudar? era de crepes and waffles y estaba muy rico ahora quiero llorar.
                     </p>
                     <div class="d-flex justify-content-between">
                         <span class="date">June 24, 2020</span>
@@ -78,18 +78,18 @@
                         <span>by Usuario1</span>
                     </div>
                 </article>
-                <article class="post">
+                <article class="post low">
                     <hr>
                     <div class="post-header">
                         <a href="post.html" class="title-post">
                             <h2 class="post-title">CALVO EN CAPA</h2>
                         </a>
                         <button class="accept-button">Accept</button>
-                    </div>   
+                    </div>
                     <div class="status-indicator">
                         <span class="status-circle status-low"></span>
                         <span class="status-text text-low">LOW</span>
-                    </div>                   
+                    </div>
                     <p class="article-content">
                         Se necesita ayuda para detener un calvo en capa. al parecer se acabaron los cupones
                         para el arroz roa que queria comprar y ahora entre llantos anda destruyendo los muros del D1
@@ -104,22 +104,22 @@
                     <div class="d-flex justify-content-between">
                         <span>by Usuario1</span>
                     </div>
-                    
+
                 </article>
-                <article class="post">
+                <article class="post medium">
                     <hr>
                     <div class="post-header">
                         <a href="post.html" class="title-post">
                             <h2 class="post-title">SE ME PERDIO FIRULAI</h2>
                         </a>
                         <button class="accept-button">Accept</button>
-                    </div>   
+                    </div>
                     <div class="status-indicator">
                         <span class="status-circle status-medium"></span>
                         <span class="status-text text-medium">MEDIUM</span>
-                    </div>                   
+                    </div>
                     <p class="article-content">
-                        Mi corazón se rompió cuando Firulai desapareció. Lo busqué por calles y parques, 
+                        Mi corazón se rompió cuando Firulai desapareció. Lo busqué por calles y parques,
                         pero mi pequeño perrito nunca regresó. Las noches son más solitarias sin sus ladridos alegres.
                     </p>
                     <div class="d-flex justify-content-between">
@@ -133,21 +133,21 @@
                         <span>by Usuario1</span>
                     </div>
                 </article>
-                <article class="post">
+                <article class="post high">
                     <hr>
                     <div class="post-header">
                         <a href="post.html" class="title-post">
                             <h2 class="post-title">SE PERDIO MI CELULAR</h2>
                         </a>
                         <button class="accept-button">Accept</button>
-                    </div>   
+                    </div>
                     <div class="status-indicator">
                         <span class="status-circle status-high"></span>
                         <span class="status-text text-high">HIGH</span>
-                    </div>                   
+                    </div>
                     <p class="article-content">
                         Alguien me puede ayudar a encontrar mi celular? lo deje en el baño de la universidad
-                         y cuando regrese ya no estaba, es un redmi note 13 pro con un forro azul
+                        y cuando regrese ya no estaba, es un redmi note 13 pro con un forro azul
                     </p>
                     <div class="d-flex justify-content-between">
                         <span class="date">June 24, 2020</span>
@@ -160,21 +160,21 @@
                         <span>by Usuario1</span>
                     </div>
                 </article>
-                <article class="post">
+                <article class="post medium">
                     <hr>
                     <div class="post-header">
                         <a href="post.html" class="title-post">
                             <h2 class="post-title">MI ABUELA SE CAYO</h2>
                         </a>
                         <button class="accept-button">Accept</button>
-                    </div>   
+                    </div>
                     <div class="status-indicator">
                         <span class="status-circle status-medium"></span>
                         <span class="status-text text-medium">MEDIUM</span>
-                    </div>                   
+                    </div>
                     <p class="article-content">
-                    Mi abuela se cayo en la calle cuando iba de camino a su bingo y nadie la ayudo, 
-                    se lastimo la espalda muy feo ¿ alguien me puede ayudar a llevarla a el hospital de san vicente?
+                        Mi abuela se cayo en la calle cuando iba de camino a su bingo y nadie la ayudo,
+                        se lastimo la espalda muy feo ¿ alguien me puede ayudar a llevarla a el hospital de san vicente?
                     </p>
                     <div class="d-flex justify-content-between">
                         <span class="date">June 24, 2020</span>
@@ -187,18 +187,18 @@
                         <span>by Usuario1</span>
                     </div>
                 </article>
-                <article class="post">
+                <article class="post high">
                     <hr>
                     <div class="post-header">
                         <a href="post.html" class="title-post">
                             <h2 class="post-title">VILLANO POR MANRIQUE</h2>
                         </a>
                         <button class="accept-button">Accept</button>
-                    </div>   
+                    </div>
                     <div class="status-indicator">
                         <span class="status-circle status-high"></span>
                         <span class="status-text text-high">HIGH</span>
-                    </div>                   
+                    </div>
                     <p class="article-content">
                         Un villano esta atacando la ciudad y necesita ser detenido,
                         se le vio por ultima vez en la calle 80 con carrera 26 montando una moto boxer con una bazooka
@@ -214,21 +214,22 @@
                         <span>by Usuario1</span>
                     </div>
                 </article>
-                <article class="post">
+                <article class="post high">
                     <hr>
                     <div class="post-header">
                         <a href="post.html" class="title-post">
                             <h2 class="post-title">AYUDA CON MI PAGINA WEB</h2>
                         </a>
                         <button class="accept-button">Accept</button>
-                    </div>   
+                    </div>
                     <div class="status-indicator">
                         <span class="status-circle status-high"></span>
                         <span class="status-text text-high">HIGH</span>
-                    </div>                   
+                    </div>
                     <p class="article-content">
-                        Necesito ayuda con mi pagina web, no se como hacer que el boton de 
-                        inicio funcione y no puedo centrar los divs que cree, el proyecto lo tengo que entregar en unas horas
+                        Necesito ayuda con mi pagina web, no se como hacer que el boton de
+                        inicio funcione y no puedo centrar los divs que cree, el proyecto lo tengo que entregar en unas
+                        horas
                     </p>
                     <div class="d-flex justify-content-between">
                         <span class="date">June 24, 2020</span>
@@ -243,9 +244,46 @@
                 </article>
             </div>
         </main>
-    </div>            
-    <!-- Your content goes here -->
-    
-    <script src="script.js"></script>
+    </div>
+
+    <div id="comic-alert-notlogged" class="comic-alert">
+        <div class="comic-alert-content">
+            <p> Para aceptar un request, debes identificarte.
+                <br>
+                Confiamos en ti, pero muchos villanos pueden aprovecharse de los débiles.
+            </p>
+
+            <div class="button-container">
+                <button onclick="closeAlert('comic-alert-notlogged', false)">Cancelar</button>
+                <button onclick="closeAlert('comic-alert-notlogged', true)">Iniciar sesión</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="comic-alert-logged" class="comic-alert">
+        <div class="comic-alert-content">
+            <p> Este request fue aceptado
+                <br>
+                ¡Gracias por hacer parte del cambio!
+            </p>
+
+            <button onclick="closeAlert('comic-alert-logged', false)">Cerrar</button>
+        </div>
+    </div>
+    <script>
+        const isAuthenticated = checkAuth();
+
+        const protectedElements = document.querySelectorAll('.protected-content');
+
+        protectedElements.forEach(function (element) {
+            if (isAuthenticated) {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        });
+    </script>
 </body>
+
 </html>

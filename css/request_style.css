@@ -9,6 +9,7 @@ body {
     font-size: 15px;
     line-height: 1.3em;
     overflow-x: hidden;
+    background-image: url("../resources/Post\ \(2\).jpg");
 }
 
 
@@ -57,9 +58,6 @@ body {
     margin-left: 16rem;
     padding: 5rem 5rem 2rem;
     height: 100%;
-    background-color: #fff;
-    background-image: url("../resources/Post\ \(2\).jpg");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
@@ -120,16 +118,28 @@ ul {
     padding: 0;
 }
 
-
-
 .req-row {
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
 }
 
 .search-form {
     display: flex;
     justify-content: flex-start;
+}
+
+.all-button {
+    width: 4rem;
+    height: 3rem;
+    border-radius: 0.25rem;
+    position: relative;
+
+    border: none;
+    background-color: rgb(33, 29, 28);
+    transition: all 0.3s ease;
+    color: white;
 }
 
 .high-button {
@@ -168,8 +178,14 @@ ul {
     color: white;
 }
 
-.post {
+.form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
+.post {
+    flex: 1 1 calc(33.333% - 20px);
     max-width: 350px;
     height: 300px;
     padding-left: 1rem;
@@ -184,6 +200,7 @@ ul {
     overflow-x: hidden;
     text-overflow: ellipsis;
     box-shadow: 8px 6px 4px 2px #000;
+    box-sizing: border-box;
 }
 
 .post-title {
@@ -251,3 +268,9 @@ ul {
     color: green;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
+}
