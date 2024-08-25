@@ -2,7 +2,7 @@ body {
     background-image: url('../resources/BgPerfil.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
+    font-family: Comic sans ms, serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -52,7 +52,7 @@ body {
 .centro {
     flex: 2;
     max-width: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(to right, rgba(245, 199, 154, 0.7), rgba(255, 127, 127, 0.7));
     padding: 60px;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ body {
 }
 
 .perfil-usuario {
-    background-color: #fff;
+    background-color: #faf7e1;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -97,16 +97,77 @@ body {
 }
 
 .reseñas {
-    background-color: #fff;
+    background-color: #f3ebbe;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 20px;
     width: 100%;
     max-width: 800px;
     align-items: flex-start;
+    max-height: 500px; /* Ajusta la altura según sea necesario */
+    overflow-y: auto;  /* Agrega desplazamiento vertical */
+
+
+}
+
+.nuevo-comentario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos */
+    width: 100%;
+}
+
+#nuevo-comentario {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ajusta al ancho del contenedor */
+    height: 150px; /* Ajusta la altura según tus necesidades */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.estrellas {
+    display: flex;
+    gap: 5px;
+}
+
+.estrella {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc; /* Color de estrella vacía */
+}
+
+.estrella.seleccionada {
+    color: #FFD700; /* Color de estrella seleccionada */
+}
+
+.btn-agregar-reseña {
+    padding: 10px 20px;
+    background-color: #2868a7; /* Color de fondo igual al de recargar saldo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-agregar-reseña:hover {
+    background-color: #218838; /* Color de fondo al pasar el ratón igual al de recargar saldo */
+    transform: scale(1.05);
+}
+
+.reseña {
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, rgba(255, 246, 246, 0.7), rgba(255, 253, 253, 0.7));
 }
 
 .solicitudes-recientes {
@@ -166,16 +227,27 @@ body {
     color: #666;
 }
 
+.recargar-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el cuadro de entrada y el botón */
+}
+
+#monto {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
 .btn-comision {
+    padding: 10px 20px;
     background-color: #28a745;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s;
     cursor: pointer;
-    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-comision:hover {
@@ -262,18 +334,51 @@ body {
         max-width: 100%;
     }
 
-    .perfil-usuario, .reseñas, .solicitudes-recientes, .saldo-usuario, .comision-usuario, .estadisticas-usuario {
-        padding: 15px;
+    .perfil-usuario, .reseñas, .saldo-usuario, .comision-usuario, .estadisticas-usuario, .solicitudes-recientes {
+        width: 100%;
+        padding: 10px;
     }
 
     .foto-perfil {
-        width: 100px;
-        height: 100px;
+        height: 200px;
+        width: 200px;
     }
 
-    .nombre-usuario {
-        font-size: 24px;
+    .nuevo-comentario {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #nuevo-comentario {
+        height: 120px;
+    }
+
+    .estrellas {
+        gap: 3px;
+    }
+
+    .estrella {
+        font-size: 20px;
     }
 }
 
+.paginacion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
+.paginacion button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.paginacion button:hover {
+    background-color: #0056b3;
+}

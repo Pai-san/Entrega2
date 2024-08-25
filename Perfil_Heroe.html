@@ -27,20 +27,45 @@
         </div>
         <div class="reseñas">
             <h1>Últimas reseñas</h1>
-            <div class="contenido reseña">
-                <p>No tienes reseñas recientes</p>
+
+            <div id="lista-reseñas">
+                <div class="comentario">
+                    <p>No tienes reseñas recientes</p>
+                </div>
+            </div>
+
+            <div class="paginacion">
+                <button id="prev-page">Anterior</button>
+                <button id="next-page">Siguiente</button>
+            </div>
+
+            <div class="nuevo-comentario comment">
+                <textarea id="nuevo-comentario" placeholder="Escribe tu reseña aquí..."></textarea>
+                <div class="estrellas">
+                    <span class="estrella" data-value="1">&#9733;</span>
+                    <span class="estrella" data-value="2">&#9733;</span>
+                    <span class="estrella" data-value="3">&#9733;</span>
+                    <span class="estrella" data-value="4">&#9733;</span>
+                    <span class="estrella" data-value="5">&#9733;</span>
+                </div>
+                <button id="agregar-comentario" class="btn-agregar-reseña">Agregar comentario</button>
+                <input type="hidden" id="calificacion" value="0">
             </div>
         </div>
+
+
     </div>
     <div class="lado derecho">
         <div class="saldo-usuario">
             <h2>Saldo del Usuario</h2>
-            <p>$0.00</p>
+            <p id="saldo">$0.00</p>
         </div>
         <div class="comision-usuario">
-            <h2>Comisión</h2>
-            <p>$0.00</p>
-            <button class="btn-comision">Hacer Comisión</button>
+            <h2>Recargar Saldo</h2>
+            <div class="recargar-contenedor">
+                <input type="number" id="monto" placeholder="Ingresa el monto">
+                <button class="btn-comision" onclick="recargarSaldo()">Recargar</button>
+            </div>
         </div>
         <div class="estadisticas-usuario">
             <h2>Estadísticas del Usuario</h2>
