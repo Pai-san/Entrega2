@@ -4,24 +4,26 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    font-size: 15px;
-}
-.header-panel {
+    font-size: 0.7em;
     background-image: url("../resources/Post.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10px;
+    width: 70%;
+    justify-content: center;
+    margin-left: 15%;
+}
+.header-panel {
+    padding: 1rem;
     text-align: center;
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    grid-gap:10px;
+    grid-template: repeat(2, 0.6fr) / repeat(2, 1fr);
     
 }
 .username {
     color: black; 
     cursor: pointer; 
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .username:hover {
@@ -31,44 +33,39 @@ body {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: 0.1rem solid #000000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: block;
-    padding: 20px;
-    width: 95%;
+    padding: 10px;
     
     align-items: flex-start;
     
 }
 .foto-perfil {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    border-radius: 70%;
+    height: 240px;
+    width: 240px;
     object-fit: cover;
     margin-right: 20px;
 }
 .panel-asunto {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
     z-index: 1;
     display: block;
-    border: 1px solid #ccc;
-    border-radius:0.5rem;
+    border: 0.1rem solid #000000;
     background-color: fff;
     z-index: 3;
     padding: 20px;
   }
   .panel-imagen {
-    
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
     z-index: 1;
     display: block;
-    border: 1px solid #ccc;
-    border-radius:0.5rem;
+    border: 0.1rem solid #000000;
     background-image: url("../resources/notlikeus.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,8 +80,7 @@ body {
     grid-row: 2 / 3;
     z-index: 1;
     display: block;
-    border: 1px solid #ccc;
-    border-radius:0.5rem;
+    border: 0.1rem solid #000000;
     background-color: fff;
     z-index: 3;
     padding: 20px;
