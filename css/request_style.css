@@ -45,8 +45,7 @@ body {
 }
 
 .header-wrapper::-webkit-scrollbar {
-    width: 0;
-    height: 0;
+    display: none;
 }
 
 .site-header {
@@ -61,6 +60,9 @@ body {
     background-position: center;
     background-size: cover;
 
+}
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .nav {
@@ -137,7 +139,7 @@ ul {
     position: relative;
 
     border: none;
-    background-color: rgb(33, 29, 28);
+    background-color: rgb(107, 102, 101);
     transition: all 0.3s ease;
     color: white;
 }
@@ -149,7 +151,7 @@ ul {
     position: relative;
 
     border: none;
-    background-color: rgb(197, 45, 7);
+    background-color: rgb(245, 75, 33);
     transition: all 0.3s ease;
     color: white;
 }
@@ -177,6 +179,7 @@ ul {
     transition: all 0.3s ease;
     color: white;
 }
+
 
 .form-inline {
     display: flex;
@@ -267,6 +270,7 @@ ul {
 .text-low {
     color: green;
 }
+
 
 .button-container {
     display: flex;

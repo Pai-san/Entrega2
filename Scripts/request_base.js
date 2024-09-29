@@ -20,13 +20,29 @@ document.addEventListener('DOMContentLoaded', function () {
     const highButton = document.querySelector('.high-button');
     const mediumButton = document.querySelector('.medium-button');
     const lowButton = document.querySelector('.low-button');
+    const buttons = [allButton, highButton, mediumButton, lowButton];
+    function resetButtonStyles() {
+        buttons.forEach(button => {
+            button.style.backgroundColor = ''; // Resetea el color de fondo
+        });
+    }
 
+    allButton.addEventListener('click', () => {filterPosts('post');
+        resetButtonStyles();
+        allButton.style.backgroundColor = '#333'});
 
+    highButton.addEventListener('click', () => {filterPosts('high');
+        resetButtonStyles();
+        highButton.style.backgroundColor = 'darkred'});
 
-    allButton.addEventListener('click', () => filterPosts('post'));
-    highButton.addEventListener('click', () => filterPosts('high'));
-    mediumButton.addEventListener('click', () => filterPosts('medium'));
-    lowButton.addEventListener('click', () => filterPosts('low'));
+    mediumButton.addEventListener('click', () =>{filterPosts('medium');
+        resetButtonStyles();
+        mediumButton.style.backgroundColor = 'darkblue'});
+
+    lowButton.addEventListener('click', () => {
+        filterPosts('low');
+        resetButtonStyles();
+        lowButton.style.backgroundColor = 'darkgreen'});
 });
 
 function filterPosts(filter) {
