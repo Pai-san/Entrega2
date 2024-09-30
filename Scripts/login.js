@@ -11,8 +11,15 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
         return;
     }
 
-
     errorMessage.style.display = 'none';
 
     loginUser();
+    
+    // Nueva lógica para redirigir al administrador
+    if (username === 'admin' && password === '12345') {
+        window.location.href = 'admin.html'; // Redirige a la página de administrador
+    } else {
+        errorMessage.textContent = 'Credenciales incorrectas. Inténtalo de nuevo.';
+        errorMessage.style.display = 'block';
+    }
 });
