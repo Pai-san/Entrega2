@@ -1,0 +1,106 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('../resources/pop-art-retro-comic-panel-bakcground-free-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #000000;
+    text-shadow: 2px 2px #ffa07a;
+}
+
+.filter-options {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-options label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.filter-options select {
+    padding: 5px;
+    font-size: 1em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 2px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff6347;
+    color: white;
+    text-shadow: 1px 1px #333;
+}
+
+td {
+    background-color: #ffe4e1;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    text-shadow: 1px 1px #333;
+}
+
+button.delete {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button.ban {
+    background-color: #f39c12;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.comic-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-size: 1.2em;
+    border: 2px solid #000;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 3px 3px #333;
+}
