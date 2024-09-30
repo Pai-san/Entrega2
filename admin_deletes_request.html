@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Gestiona Peticiones</title>
+    <link rel="stylesheet" href="css/admin_deletes_request.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Administrador de Requests</h1>
+        </div>
+        <table id="requestTable">
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Hero & Civil</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Enseñar matemáticas</td>
+                    <td>Superman & John Doe</td>
+                    <td>
+                        <button class="approve" onclick="approveRequest('Enseñar matemáticas')">Aprobar</button>
+                        <button class="delete" onclick="deleteRequest('Enseñar matemáticas')">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Entrenamiento físico</td>
+                    <td>Wonder Woman & Jane Doe</td>
+                    <td>
+                        <button class="approve" onclick="approveRequest('Entrenamiento físico')">Aprobar</button>
+                        <button class="delete" onclick="deleteRequest('Entrenamiento físico')">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/admin_deletes_request.js"></script>
+    <a href="admin.html" class="comic-button">Volver a Admin</a>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Elimina Cuenta</title>
+    <link rel="stylesheet" href="css/admin_account_deleted.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Admin Elimina Cuenta</h1>
+        </div>
+        <div class="filter-options">
+            <label for="filter">Filtrar por:</label>
+            <select id="filter">
+                <option value="antiguedad">Antigüedad</option>
+                <option value="nombre">Nombre (A-Z)</option>
+            </select>
+        </div>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Antigüedad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Perez</td>
+                    <td>2 años</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Juan Perez')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Juan Perez')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ana Gomez</td>
+                    <td>1 año</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Ana Gomez')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Ana Gomez')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carlos Ruiz</td>
+                    <td>3 años</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Carlos Ruiz')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Carlos Ruiz')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Maria Lopez</td>
+                    <td>4 años</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Maria Lopez')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Maria Lopez')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pedro Martinez</td>
+                    <td>5 años</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Pedro Martinez')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Pedro Martinez')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Luisa Fernandez</td>
+                    <td>6 meses</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Luisa Fernandez')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Luisa Fernandez')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jorge Ramirez</td>
+                    <td>1 año y 6 meses</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Jorge Ramirez')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Jorge Ramirez')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sofia Torres</td>
+                    <td>2 años y 3 meses</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Sofia Torres')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Sofia Torres')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ricardo Diaz</td>
+                    <td>8 meses</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Ricardo Diaz')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Ricardo Diaz')">Banear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Elena Morales</td>
+                    <td>2 años y 6 meses</td>
+                    <td>
+                        <button class="delete" onclick="deleteUser('Elena Morales')">Eliminar</button>
+                        <button class="ban" onclick="banUser('Elena Morales')">Banear</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/admin_deletes_account.js"></script>
+    <a href="admin.html" class="comic-button">Volver a Admin</a>
+</body>
+</html>

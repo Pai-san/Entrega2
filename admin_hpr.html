@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Analiza HPR</title>
+    <link rel="stylesheet" href="css/admin_hpr.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hero Promotion</h1>
+        </div>
+        <table id="hprTable">
+            <thead>
+                <tr>
+                    <th>Nombre Civil</th>
+                    <th>Solicitud</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Quiero ser un héroe para enseñar matemáticas.</td>
+                    <td>
+                        <button class="approve" onclick="approveRequest('John Doe')">Aprobar</button>
+                        <button class="reject" onclick="rejectRequest('John Doe')">Rechazar</button>
+                        <button class="reject" onclick="rejectRequest('Jane Smith')">Ver Perfil</button>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Me gustaría ser un héroe para entrenar a otros.</td>
+                    <td>
+                        <button class="approve" onclick="approveRequest('Jane Smith')">Aprobar</button>
+                        <button class="reject" onclick="rejectRequest('Jane Smith')">Rechazar</button>
+                        <button class="reject" onclick="rejectRequest('Jane Smith')">Ver Perfil</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/admin_hpr.js"></script>
+    <a href="admin.html" class="comic-button">Volver a Admin</a>
+</body>
+</html>
